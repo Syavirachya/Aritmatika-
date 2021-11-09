@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>Perhitungan Online</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+<!--CSS-->
+<style>
+body{
+    background-image: url("tugas JS/background.jpg");
+}
+nav{
+ 
+    position: absolute;
+    transform: translate(50%, 50%);
+    margin: auto;
+    width: 50%;
+    height: 320px;
+    background-color: #f8ebe5;
+
+
+}
+
+h2{ 
+    font-size: 26px;
+    color: #998375;
+    padding-left: 200px;
+    font-family: Rockwell;
+    
+    }
+p{
+    padding-left: 30px;
+    font-family: Gabriola;
+    font-size: 18px;
+}
+input{
+    border-radius: 20px;
+    height: 30px;
+    width: 200px;
+}
+select{
+    position: relative;
+    transform: translate(180%);
+    font-family: Gabriola;
+    border-radius: 20px;
+    height: 30px;
+    background-color:#b8a89b ;
+}
+button{
+    position: relative;
+    transform: translate(300%);
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 12px;
+    font-family: Rockwell;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    color: #ffff;
+    background-color:#b08c64;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 5px #b8a89b;
+}
+button:active{
+    position: absolute;
+    transform: translatex(300%);
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 12px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #b17455;
+    box-shadow:0 2px #b49b94 ;
+    
+
+}
+</style>
+<body>
+    <form name="form_hitung">
+    <section>
+        <nav>
+            <h2>PERHITUNGAN + - x :</h2><br/>
+            <p>Masukan Angka Pertama : <input type="number" name="angka1"></p>
+            <select name="opsi" id="opsi">
+                <option value="none" selected disabled hidden>Pilih Operasi Aritmatika</option>
+                <option value="tambah" >+</option>
+                <option value="kurang">-</option>
+                <option value="kali">x</option>
+                <option value="bagi">:</option>
+            </select>
+            <p>Masukan Angka Kedua  :  &nbsp;&nbsp;<input type="number" name="angka2"></p>
+        
+            <button type="button" onclick="myFunction()">Hitung</button>
+          </nav>
+    </section>
+    </form>
+
+    <!-- Javascript-->
+    <script>
+        //logika dari perhitungan
+        function myFunction(){
+            var form = document.form_hitung;
+            var angka1=eval(form.angka1.value);
+            var angka2=eval(form.angka2.value);
+            var pilih=form.opsi.value;
+            //Rumus operasi Aritmatika 
+                if (pilih == "tambah")
+                    {
+                        var hasil_hitung = angka1 + angka2;
+                        alert("Hasil Perhitungan dari " + angka1 + " + " + angka2 + " = " + hasil_hitung);
+                        console.log("Hasil Perhitungan dari " + angka1 + " + " + angka2 + " = " + hasil_hitung);
+                    }
+                else if (pilih == "kurang")
+                    {
+                        var hasil_hitung1 = angka1 - angka2;
+                        alert("Hasil Perhitungan dari " + angka1 + " - " + angka2 + " = " + hasil_hitung1);
+                        console.log(hasil_hitung1);
+                    }
+                else if (pilih == "kali")
+                    {
+                        var hasil_hitung2 = angka1 * angka2;
+                        alert("Hasil Perhitungan dari " + angka1 + " * " + angka2 + " = " + hasil_hitung2);
+                        console.log(hasil_hitung2);
+                    }
+                else if (pilih == "bagi")
+                    {
+                        var hasil_hitung3 = angka1 / angka2;
+                        alert("Hasil Perhitungan dari " + angka1 + " / " + angka2 + " = " + hasil_hitung3);
+                        console.log(hasil_hitung3);
+                    }
+                form.value = hasil_hitung;
+                form.angka1.value ="";
+                form.angka2.value = "";
+
+              
+            
+    
+        }
+    </script>
+</body>
+</html>
