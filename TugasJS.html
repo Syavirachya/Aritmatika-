@@ -8,7 +8,7 @@
 <!--CSS-->
 <style>
 body{
-    background-image: url("tugas JS/background.jpg");
+    background-color: #b49b94;
 }
 nav{
  
@@ -77,6 +77,8 @@ button:active{
 
 }
 </style>
+
+
 <body>
     <form name="form_hitung">
     <section>
@@ -109,26 +111,30 @@ button:active{
                 if (pilih == "tambah")
                     {
                         var hasil_hitung = angka1 + angka2;
-                        alert("Hasil Perhitungan dari " + angka1 + " + " + angka2 + " = " + hasil_hitung);
                         console.log("Hasil Perhitungan dari " + angka1 + " + " + angka2 + " = " + hasil_hitung);
+                        alert("Hasil Perhitungan dari " + angka1 + " + " + angka2 + " = " + hasil_hitung);
+                        
                     }
                 else if (pilih == "kurang")
                     {
                         var hasil_hitung1 = angka1 - angka2;
+                        console.log("Hasil Perhitungan dari " + angka1 + " - " + angka2 + " = " + hasil_hitung1);
                         alert("Hasil Perhitungan dari " + angka1 + " - " + angka2 + " = " + hasil_hitung1);
-                        console.log(hasil_hitung1);
+                        
                     }
                 else if (pilih == "kali")
                     {
                         var hasil_hitung2 = angka1 * angka2;
+                       console.log("Hasil Perhitungan dari " + angka1 + " * " + angka2 + " = " + hasil_hitung2);
                         alert("Hasil Perhitungan dari " + angka1 + " * " + angka2 + " = " + hasil_hitung2);
-                        console.log(hasil_hitung2);
+                        
                     }
                 else if (pilih == "bagi")
                     {
                         var hasil_hitung3 = angka1 / angka2;
+                        console.log("Hasil Perhitungan dari " + angka1 + " / " + angka2 + " = " + hasil_hitung3);
                         alert("Hasil Perhitungan dari " + angka1 + " / " + angka2 + " = " + hasil_hitung3);
-                        console.log(hasil_hitung3);
+                       
                     }
                 form.value = hasil_hitung;
                 form.angka1.value ="";
